@@ -17,11 +17,7 @@ const MenuDropdown = () => {
           </p>
         </div>
 
-        <img
-          src="https://a0.muscache.com/im/pictures/airbnb-platform-assets/AirbnbPlatformAssets-hosting/original/34f8d7ec-d63b-4fd7-b6f8-25b78146ee10.png"
-          alt="Host"
-          className="w-16"
-        />
+        <img src="/assets/image.png" alt="Host" className="w-16" />
       </div>
 
       <hr />

@@ -27,13 +27,9 @@ const Listings = ({ title, listings }) => {
 
         <div className="mb-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <h2 className="text-[20px] font-semibold">
-              <h2 className="text-[20px] font-semibold">{title}</h2>
-            </h2>
-
+            {title}
             <FaChevronRight className="text-xl" />
           </div>
-
           {/* Buttons */}
 
           <div className="flex gap-3">

@@ -7,7 +7,7 @@ const Home = () => {
       {sections.map((section) => (
         <Listings
           key={section.id}
-          title={section.title}
+          title={<h2 className="text-[20px] font-semibold">{section.title}</h2>}
           listings={section.listings}
         />
       ))}
