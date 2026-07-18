@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaAirbnb, FaGlobe } from "react-icons/fa";
 import { HiOutlineMenu } from "react-icons/hi";
 import { FiSearch } from "react-icons/fi";
+import MenuDropdown from "./MenuDropdown";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +17,20 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -132,7 +149,6 @@ const Navbar = () => {
                   <video
                     className="w-8 h-8 pointer-events-none select-none"
                     autoPlay
-                    loop
                     muted
                     playsInline
                   >
@@ -171,9 +187,17 @@ const Navbar = () => {
               <FaGlobe />
             </li>
 
-            <li className="w-10 h-10 rounded-full bg-gray-100 flex justify-center items-center cursor-pointer hover:bg-gray-200 text-black">
-              <HiOutlineMenu />
-            </li>
+            <div className="relative">
+              <button
+                ref={menuRef}
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="w-10 h-10 rounded-full bg-gray-100 flex justify-center items-center hover:bg-gray-200"
+              >
+                <HiOutlineMenu />
+              </button>
+
+              {menuOpen && <MenuDropdown />}
+            </div>
           </ul>
         </div>
       </div>
