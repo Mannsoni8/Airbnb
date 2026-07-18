@@ -1,50 +1,51 @@
-export const listings = [
-  {
-    id: 1,
-    image: "https://picsum.photos/500/500?1",
-    title: "Mountain Cabin",
-    location: "Manali, India",
-    price: "8,500",
-    rating: "4.9",
-  },
-  {
-    id: 2,
-    image: "https://picsum.photos/500/500?2",
-    title: "Beach Villa",
-    location: "Goa, India",
-    price: "12,000",
-    rating: "4.8",
-  },
-  {
-    id: 3,
-    image: "https://picsum.photos/500/500?3",
-    title: "Luxury Apartment",
-    location: "Mumbai",
-    price: "9,200",
-    rating: "4.7",
-  },
-  {
-    id: 4,
-    image: "https://picsum.photos/500/500?4",
-    title: "Lake House",
-    location: "Udaipur",
-    price: "10,500",
-    rating: "4.9",
-  },
-  {
-    id: 5,
-    image: "https://picsum.photos/500/500?5",
-    title: "Tree House",
-    location: "Kerala",
-    price: "7,900",
-    rating: "4.8",
-  },
-  {
-    id: 6,
-    image: "https://picsum.photos/500/500?6",
-    title: "Modern Studio",
-    location: "Bangalore",
-    price: "6,800",
-    rating: "4.6",
-  },
+const locations = [
+  "Manali",
+  "Goa",
+  "Mumbai",
+  "Udaipur",
+  "Kerala",
+  "Bangalore",
+  "Jaipur",
+  "Shimla",
+  "Ooty",
+  "Pondicherry",
 ];
+
+const titles = [
+  "Mountain Cabin",
+  "Luxury Villa",
+  "Modern Apartment",
+  "Lake House",
+  "Tree House",
+  "Beach House",
+  "Palm Resort",
+  "Hill Cottage",
+  "Skyline Studio",
+  "Forest Retreat",
+];
+
+const sectionTitles = [
+  "Popular homes in Gurgaon",
+  "Available in Mumbai",
+  "Stay in Goa",
+  "Amazing pools",
+  "Cabins",
+  "Beachfront stays",
+  "Trending homes",
+  "Countryside homes",
+  "Luxury stays",
+  "New this week",
+];
+
+export const sections = sectionTitles.map((title, sectionIndex) => ({
+  id: sectionIndex + 1,
+  title,
+  listings: Array.from({ length: 10 }, (_, i) => ({
+    id: sectionIndex * 10 + i + 1,
+    image: `https://picsum.photos/500/500?random=${sectionIndex * 10 + i + 1}`,
+    title: titles[i],
+    location: locations[i],
+    price: `${6500 + i * 700}`,
+    rating: (4.5 + Math.random() * 0.5).toFixed(1),
+  })),
+}));

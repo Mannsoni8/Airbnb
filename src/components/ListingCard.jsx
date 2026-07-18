@@ -2,8 +2,8 @@ import { FaHeart, FaStar } from "react-icons/fa";
 
 const ListingCard = ({ image, title, location, price, rating }) => {
   return (
-    <div className="w-[215px] flex-shrink-0 cursor-pointer group">
-      <div className="relative h-[193px] overflow-hidden rounded-[20px]">
+    <div className="w-[200px] shrink-0 cursor-pointer group">
+      <div className="relative h-[180px] overflow-hidden rounded-[20px]">
         <img
           src={image}
           alt={title}

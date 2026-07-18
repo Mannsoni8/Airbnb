@@ -1,5 +1,6 @@
 import Footer from "./components/Footer";
-import Listings from "./components/Listings";
+import Home from "./components/Home";
+
 import Navbar from "./components/Navbar";
 
 const App = () => {
@@ -9,9 +10,7 @@ const App = () => {
         <Navbar />
       </div>
       <div className=" mt-[12%] mx-[3%]">
-        <Listings />
-        <Listings />
-
+        <Home />
         <Footer />
       </div>
     </div>
