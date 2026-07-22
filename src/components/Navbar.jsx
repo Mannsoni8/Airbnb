@@ -40,8 +40,9 @@ const Navbar = () => {
       }`}
     >
       <div className="flex justify-between items-start px-12">
-        <div className="text-3xl font-bold text-[#FF385C] cursor-pointer">
+        <div className="flex text-4xl font-bold text-[#FF385C] cursor-pointer">
           <FaAirbnb />
+          <span className="text-xl text-[#FF385C]">airbnb</span>
         </div>
 
         <div className="flex flex-col items-center">
@@ -52,8 +53,8 @@ const Navbar = () => {
                 : "max-h-20 opacity-100 translate-y-0 mb-6"
             }`}
           >
-            <ul className="flex items-center gap-10 text-lg font-medium">
-              <li className="flex items-center gap-2 cursor-pointer pointer-events-none select-none text-black font-medium">
+            <ul className="flex items-center gap-2 text-lg font-medium">
+              <li className="flex items-center cursor-pointer pointer-events-none select-none text-black font-medium">
                 <video
                   className="w-15 h-15"
                   playsInline
@@ -71,7 +72,7 @@ const Navbar = () => {
                 <span>Homes</span>
               </li>
 
-              <li className="flex items-center gap-2 cursor-pointer pointer-events-none select-none text-black font-medium">
+              <li className="flex items-center cursor-pointer pointer-events-none select-none text-black font-medium">
                 <video
                   className="w-15 h-15"
                   playsInline
@@ -88,7 +89,7 @@ const Navbar = () => {
                 <span>Experiences</span>
               </li>
 
-              <li className="flex items-center gap-2 cursor-pointer pointer-events-none select-none text-black font-medium">
+              <li className="flex items-center cursor-pointer pointer-events-none select-none text-black font-medium">
                 <video
                   className="w-15 h-15"
                   playsInline

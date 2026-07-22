@@ -22,15 +22,12 @@ const Listings = ({ title, listings }) => {
 
   return (
     <>
-      <section className="mx-auto max-w-[1700px] px-8 py-10">
-        {/* Heading */}
-
+      <section className="mx-auto max-w-[1700px] px-8 py-6">
         <div className="mb-2 flex items-center justify-between">
           <div className="flex items-center gap-2">
             {title}
             <FaChevronRight className="text-xl" />
           </div>
-          {/* Buttons */}
 
           <div className="flex gap-3">
             <button
@@ -48,8 +45,6 @@ const Listings = ({ title, listings }) => {
             </button>
           </div>
         </div>
-
-        {/* Slider */}
 
         <div
           ref={slider}

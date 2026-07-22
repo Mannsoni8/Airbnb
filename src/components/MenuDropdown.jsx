@@ -17,7 +17,7 @@ const MenuDropdown = () => {
           </p>
         </div>
 
-        <img src="/assets/image.png" alt="Host" className="w-16" />
+        <img src="/image.png" alt="Host" className="w-16" />
       </div>
 
       <hr />

@@ -9,7 +9,7 @@ const App = () => {
       <div>
         <Navbar />
       </div>
-      <div className=" mt-[12%] mx-[3%]">
+      <div className=" mt-[15%] mx-[3%]">
         <Home />
         <Footer />
       </div>

@@ -2,7 +2,7 @@ import { FaHeart, FaStar } from "react-icons/fa";
 
 const ListingCard = ({ image, title, location, price, rating }) => {
   return (
-    <div className="w-[200px] shrink-0 cursor-pointer group">
+    <div className="w-[187px] shrink-0 cursor-pointer group">
       <div className="relative h-[180px] overflow-hidden rounded-[20px]">
         <img
           src={image}
@@ -33,14 +33,14 @@ const ListingCard = ({ image, title, location, price, rating }) => {
           <div className="flex items-center gap-1">
             <FaStar className="text-[12px]" />
 
-            <span className="text-[15px]">{rating}</span>
+            <span className="text-[10px]">{rating}</span>
           </div>
         </div>
 
-        <p className="text-[15px] text-gray-500">{location}</p>
+        <p className="text-[10px] text-gray-500">{location}</p>
 
-        <p className="mt-1 text-[16px]">
-          <span className="font-semibold">₹{price}</span> for 2 nights
+        <p className="mt-1 text-[10px]">
+          <span>₹{price}</span> for 2 nights
         </p>
       </div>
     </div>
