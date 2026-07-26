@@ -187,7 +187,7 @@ const Navbar = () => {
               <FaGlobe />
             </li>
 
-            <div className=" sm:hidden">
+            <div className=" relative sm:hidden">
               <button
                 ref={menuRef}
                 onClick={() => setMenuOpen(!menuOpen)}
