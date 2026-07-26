@@ -39,13 +39,12 @@ const Navbar = () => {
         isScrolled ? "bg-[#FBFBFB] py-4" : "bg-[#FBFBFB] py-6"
       }`}
     >
-      <div className="flex justify-between items-start px-12">
-        <div className="flex text-4xl font-bold text-[#FF385C] cursor-pointer">
+      <div className="flex justify-between items-center px-4 sm:px-8 lg:px-12">
+        <div className="flex items-center text-3xl sm:text-4xl font-bold text-[#FF385C] cursor-pointer">
           <FaAirbnb />
           <span className="text-xl text-[#FF385C]">airbnb</span>
         </div>
-
-        <div className="flex flex-col items-center">
+        <div className="hidden md:flex flex-col items-center">
           <div
             className={`overflow-hidden transition-all duration-500 ${
               isScrolled
@@ -111,7 +110,7 @@ const Navbar = () => {
           {/* Search Bar */}
           <div
             className={`flex items-center rounded-full border border-gray-200 bg-white shadow-lg transition-all duration-500 ${
-              isScrolled ? "px-4 py-2 gap-4" : "w-[850px] h-[66px]"
+              isScrolled ? "px-4 py-2 gap-4" : "w-[500px] lg:w-[850px] h-[66px]"
             }`}
           >
             {!isScrolled ? (
@@ -178,7 +177,7 @@ const Navbar = () => {
         </div>
 
         {/* Right */}
-        <div>
+        <div className="hidden sm:block">
           <ul className="flex items-center gap-6">
             <li className="cursor-pointer font-medium hover:bg-gray-100 px-4 py-2 rounded-full text-black">
               Become a host
@@ -188,7 +187,7 @@ const Navbar = () => {
               <FaGlobe />
             </li>
 
-            <div className="relative">
+            <div className=" sm:hidden">
               <button
                 ref={menuRef}
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -197,7 +196,11 @@ const Navbar = () => {
                 <HiOutlineMenu />
               </button>
 
-              {menuOpen && <MenuDropdown />}
+              {menuOpen && (
+                <div className="absolute right-4 top-14">
+                  <MenuDropdown />
+                </div>
+              )}
             </div>
           </ul>
         </div>
