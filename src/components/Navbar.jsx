@@ -177,7 +177,7 @@ const Navbar = () => {
         </div>
 
         {/* Right */}
-        <div className="hidden sm:block">
+        <div className="sm:block">
           <ul className="flex items-center gap-6">
             <li className="cursor-pointer font-medium hover:bg-gray-100 px-4 py-2 rounded-full text-black">
               Become a host
@@ -187,7 +187,7 @@ const Navbar = () => {
               <FaGlobe />
             </li>
 
-            <div className=" relative sm:hidden">
+            <div className=" relative">
               <button
                 ref={menuRef}
                 onClick={() => setMenuOpen(!menuOpen)}
@@ -196,11 +196,7 @@ const Navbar = () => {
                 <HiOutlineMenu />
               </button>
 
-              {menuOpen && (
-                <div className="absolute right-4 top-14">
-                  <MenuDropdown />
-                </div>
-              )}
+              {menuOpen && <MenuDropdown />}
             </div>
           </ul>
         </div>
