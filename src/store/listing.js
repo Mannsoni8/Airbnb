@@ -48,14 +48,21 @@ const hotelImages = [
   "https://images.unsplash.com/photo-1590490360182-c33d57733427",
   "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
   "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+  "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c",
+  "https://images.unsplash.com/photo-1584132967334-10e028bd69f7",
+  "https://images.unsplash.com/photo-1584132967334-10e028bd69f7",
+  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
+  "https://images.unsplash.com/photo-1510798831971-661eb04b3739",
 ];
 
 export const sections = sectionTitles.map((title, sectionIndex) => ({
   id: sectionIndex + 1,
   title,
-  listings: Array.from({ length: 10 }, (_, i) => ({
+  listings: Array.from({ length: 8 }, (_, i) => ({
     id: sectionIndex * 10 + i + 1,
-    image: `${hotelImages[i % hotelImages.length]}?auto=format&fit=crop&w=500&h=500`,
+
+    image: `${hotelImages[(sectionIndex * 3 + i) % hotelImages.length]}?auto=format&fit=crop&w=500&h=500`,
+
     title: titles[i],
     location: locations[i],
     price: `${6500 + i * 700}`,
