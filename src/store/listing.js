@@ -37,12 +37,25 @@ const sectionTitles = [
   "New this week",
 ];
 
+const hotelImages = [
+  "https://images.unsplash.com/photo-1566073771259-6a8506099945",
+  "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b",
+  "https://images.unsplash.com/photo-1445019980597-93fa8acb246c",
+  "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267",
+  "https://images.unsplash.com/photo-1578683010236-d716f9a3f461",
+  "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb",
+  "https://images.unsplash.com/photo-1601918774946-25832a4be0d6",
+  "https://images.unsplash.com/photo-1590490360182-c33d57733427",
+  "https://images.unsplash.com/photo-1564501049412-61c2a3083791",
+  "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa",
+];
+
 export const sections = sectionTitles.map((title, sectionIndex) => ({
   id: sectionIndex + 1,
   title,
   listings: Array.from({ length: 10 }, (_, i) => ({
     id: sectionIndex * 10 + i + 1,
-    image: `https://picsum.photos/500/500?random=${sectionIndex * 10 + i + 1}`,
+    image: `${hotelImages[i % hotelImages.length]}?auto=format&fit=crop&w=500&h=500`,
     title: titles[i],
     location: locations[i],
     price: `${6500 + i * 700}`,
